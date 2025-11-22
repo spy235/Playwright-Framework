@@ -1,0 +1,14 @@
+{
+  "qa": {
+    "adminLogin": {
+      "Username": "Admin",
+      "Password": "admin123"
+    }
+  },
+  "stage": {
+    "adminLogin": {
+      "Username": "Admin",
+      "Password": "admin123"
+    }
+  }
+}
