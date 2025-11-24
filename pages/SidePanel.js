@@ -1,4 +1,4 @@
-const { AdminPage } = require('./AdminPage');
+const AdminPage = require('./AdminPage');
 
 class SidePanel {
   /**
