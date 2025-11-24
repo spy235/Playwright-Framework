@@ -1,9 +1,14 @@
 {
   "qa": {
-    "adminLogin": {
+    "adminValidLogin": {
       "Username": "Admin",
       "Password": "admin123"
+    },
+    "adminInvalidLogin": {
+      "Username": "invalid",
+      "Password": "admin123"
     }
+    
   },
   "stage": {
     "adminLogin": {

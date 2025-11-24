@@ -1,3 +1,5 @@
+const { SidePanel } = require('./SidePanel');
+
 class LoginPage {
   /**
    * @param {import('@playwright/test').Page} page
@@ -13,6 +15,7 @@ class LoginPage {
 
   async goto(url) {
     await this.page.goto(url);
+    return new SidePanel(this.page)
   }
 
   async login(username, password) {
