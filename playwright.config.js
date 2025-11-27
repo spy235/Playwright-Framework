@@ -1,6 +1,7 @@
 // @ts-check
 import { defineConfig, devices } from "@playwright/test";
 import { getEnvURL } from "./utils/configLoader";
+import { getBrowserProjects } from "./utils/browserSelector";
 
 export default defineConfig({
   testDir: "./tests",
@@ -9,8 +10,9 @@ export default defineConfig({
   reporter: "html",
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    // baseURL: 'http://127.0.0.1:3000',
-    baseURL: getEnvURL(),
+
+  //set BROWSER=chromium  && set ENV=qa && npx playwright test    
+  baseURL: getEnvURL(),
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: "on-first-retry",
     // storageState: "config/adminState.json", // <– logged-in session
@@ -18,10 +20,6 @@ export default defineConfig({
   },
 
   /* Configure projects for major browsers */
-  projects: [
-    {
-      name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
-    },
-  ]
+  //set BROWSER=chromium  && set ENV=qa && npx playwright test
+  projects: getBrowserProjects()
 });
