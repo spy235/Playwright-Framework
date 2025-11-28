@@ -16,7 +16,9 @@ export default async () => {
 
   // Headless login
   const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext();
+    const context = await browser.newContext({
+    ignoreHTTPSErrors: true,  // <-- add this
+  });
   const page = await context.newPage();
 
   const baseUrl = getEnvURL();

@@ -10,15 +10,3 @@ export function getEnvURL() {
 
   return url;
 }
-
-
-export function getBrowser(){
-const env = (process.env.BROWSER || "chrome").trim();
-
-  [
-      {
-        name: "chromium",
-        use: { ...devices["Desktop Chrome"] },
-      },
-    ]
-}
